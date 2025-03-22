@@ -1,5 +1,7 @@
 package lms.exeptions;
 
-public class EmptyLibraryException extends RuntimeException {
-
+public class EmptyLibraryException extends Exception {
+    public EmptyLibraryException (String message) {
+        super(message);
+    }
 }
