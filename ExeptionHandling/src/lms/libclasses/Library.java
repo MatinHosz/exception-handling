@@ -2,8 +2,7 @@ package lms.libclasses;
 
 import java.util.ArrayList;
 
-import lms.exeptions.EmptyLibraryException;
-import lms.exeptions.InvalidBookException;
+import lms.exeptions.*;
 
 public class Library {
     private ArrayList<Book> books = new ArrayList<Book>();
@@ -24,7 +23,7 @@ public class Library {
         return null;
     }
 
-    public void borrowBook(String title) throws BookNotFoundException {
+    public void borrowBook(String title) throws BookNotFoundException , EmptyLibraryException {
             if (books.isEmpty())
                 throw new EmptyLibraryException("Library is empty, no books to borrow");
             if (findBook(title) == null)
