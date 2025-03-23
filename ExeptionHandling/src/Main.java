@@ -1,7 +1,7 @@
 import lms.exeptions.*;
 import lms.libclasses.*;
 
-public class ExceptionHandling {
+public class Main {
     public static void main(String[] args) {
         Library library = new Library();
 
