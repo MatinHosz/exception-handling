@@ -5,7 +5,7 @@ public class Book {
     private int pageCount;
 
     public Book (String title, int pageCount) {
-        if (title == null)
+        if (title == null || title.isEmpty())
             throw new IllegalArgumentException("Title cannot be empty");
         if (pageCount < 1)
             throw new IllegalArgumentException("Page count must be positive");
